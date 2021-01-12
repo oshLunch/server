@@ -62,7 +62,17 @@
 		</c:choose>
 	</ul>
 </div>
+<script>
 
+	function deleteUser(id){
+		$.ajax({
+			url : "/Test/user?cmd=deleteByAdmin&id="+id,
+		}).done(function(result) {
+			location.reload();
+		});
+	}
+	
+</script>
 </body>
 </html>
 
